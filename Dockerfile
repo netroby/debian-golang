@@ -2,6 +2,9 @@ FROM alpine
 
 MAINTAINER ZhiFeng Hu "hufeng1987@gmail.com"
 
+RUN apk update
+RUN apk add curl
+
 ENV GOLANG_VERSION 1.4.2
 
 RUN curl -sSL https://storage.googleapis.com/golang/go$GOLANG_VERSION.linux-amd64.tar.gz \
