@@ -1,9 +1,10 @@
-FROM alpine
+FROM debian
 
 MAINTAINER ZhiFeng Hu "hufeng1987@gmail.com"
 
-RUN apk update
-RUN apk add curl
+RUN apt-get update
+RUN apt-get install -y curl
+RUN rm -rf /var/lib/apt/lists/*
 
 ENV GOLANG_VERSION 1.4.2
 
